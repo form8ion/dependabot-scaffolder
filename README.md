@@ -1,6 +1,7 @@
 # dependabot-scaffolder
 
-opinionated scaffolder for enabling dependabot on a project
+opinionated scaffolder for enabling [Dependabot](https://dependabot.com/) on a
+project
 
 <!-- status badges -->
 
@@ -10,7 +11,10 @@ opinionated scaffolder for enabling dependabot on a project
 
 * [Usage](#usage)
   * [Installation](#installation)
+  * [Features](#features)
   * [Example](#example)
+    * [Import](#import)
+    * [Execute](#execute)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -29,6 +33,13 @@ opinionated scaffolder for enabling dependabot on a project
 $ npm install @form8ion/dependabot-scaffolder --save-prod
 ```
 
+### Features
+
+* Defines a badge that shows whether [Dependabot](https://dependabot.com/) is
+  enabled for the project
+* Creates the config file for [Dependabot](https://dependabot.com/), enabling
+  auto-merging
+
 ### Example
 
 #### Import
@@ -42,7 +53,7 @@ import {scaffold} from '@form8ion/dependabot-scaffolder';
 ```javascript
 scaffold({
   projectRoot: process.cwd(),
-  vcs: {host: 'GitHub', owner: 'form8ion', name: 'the-repo'}
+  vcs: {owner: 'form8ion', name: 'the-repo'}
 });
 ```
 
