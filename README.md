@@ -1,6 +1,7 @@
 # dependabot-scaffolder
 
-opinionated scaffolder for enabling dependabot on a project
+opinionated scaffolder for enabling [Dependabot](https://dependabot.com/) on a
+project
 
 <!-- status badges -->
 
@@ -10,7 +11,13 @@ opinionated scaffolder for enabling dependabot on a project
 
 * [Usage](#usage)
   * [Installation](#installation)
+  * [Features](#features)
   * [Example](#example)
+    * [Import](#import)
+    * [Execute](#execute)
+  * [API](#api)
+    * [`projectRoot` __string__ (_required_)](#projectroot-string-required)
+    * [`vcs` __object__ (_required_)](#vcs-object-required)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -29,11 +36,42 @@ opinionated scaffolder for enabling dependabot on a project
 $ npm install @form8ion/dependabot-scaffolder --save-prod
 ```
 
+### Features
+
+* Defines a badge that shows whether [Dependabot](https://dependabot.com/) is
+  enabled for the project
+* Creates the config file for [Dependabot](https://dependabot.com/), enabling
+  auto-merging
+
 ### Example
 
+#### Import
+
 ```javascript
-import dependabotScaffolder from '@form8ion/dependabot-scaffolder';
+import {scaffold} from '@form8ion/dependabot-scaffolder';
 ```
+
+#### Execute
+
+```javascript
+scaffold({
+  projectRoot: process.cwd(),
+  vcs: {owner: 'form8ion', name: 'the-repo'}
+});
+```
+
+### API
+
+#### `projectRoot` __string__ (_required_)
+
+path to the root of the project
+
+#### `vcs` __object__ (_required_)
+
+* `owner` __string__ (_required_)
+  account name on the host service for the repository
+* `name` __string__ (_required_)
+  repository name
 
 ## Contributing
 
