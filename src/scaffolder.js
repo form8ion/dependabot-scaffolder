@@ -1,6 +1,6 @@
 import scaffoldConfig from './config';
 
-export default async function ({projectRoot, vcs: {host, owner, name}}) {
+export default async function ({projectRoot, vcs: {owner, name}}) {
   await scaffoldConfig({projectRoot});
 
   return {
@@ -9,7 +9,7 @@ export default async function ({projectRoot, vcs: {host, owner, name}}) {
         dependabot: {
           text: 'Dependabot',
           link: 'https://dependabot.com/',
-          img: `https://api.dependabot.com/badges/status?host=${host}&repo=${owner}/${name}`
+          img: `https://badgen.net/dependabot/${owner}/${name}/?icon=dependabot`
         }
       }
     }

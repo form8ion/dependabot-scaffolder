@@ -16,18 +16,17 @@ suite('scaffolder', () => {
   teardown(() => sandbox.restore());
 
   test('that dependabot gets configured', async () => {
-    const vcsHost = any.word();
     const repoOwner = any.word();
     const repoName = any.word();
     const projectRoot = any.string();
 
     assert.deepEqual(
-      await scaffold({projectRoot, vcs: {host: vcsHost, owner: repoOwner, name: repoName}}),
+      await scaffold({projectRoot, vcs: {owner: repoOwner, name: repoName}}),
       {
         badges: {
           contribution: {
             dependabot: {
-              img: `https://api.dependabot.com/badges/status?host=${vcsHost}&repo=${repoOwner}/${repoName}`,
+              img: `https://badgen.net/dependabot/${repoOwner}/${repoName}/?icon=dependabot`,
               text: 'Dependabot',
               link: 'https://dependabot.com/'
             }
