@@ -1,4 +1,8 @@
-export default function ({vcs: {host, owner, name}}) {
+import scaffoldConfig from './config';
+
+export default async function ({projectRoot, vcs: {host, owner, name}}) {
+  await scaffoldConfig({projectRoot});
+
   return {
     badges: {
       contribution: {
