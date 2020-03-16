@@ -38,10 +38,11 @@ $ npm install @form8ion/dependabot-scaffolder --save-prod
 
 ### Features
 
-* Defines a badge that shows whether [Dependabot](https://dependabot.com/) is
+* Defines a [badge](https://badgen.net/#dependabot) that shows whether [Dependabot](https://dependabot.com/) is
   enabled for the project
-* Creates the config file for [Dependabot](https://dependabot.com/), enabling
-  auto-merging
+* Creates the [config file](https://dependabot.com/docs/config-file/) for [Dependabot](https://dependabot.com/),
+  enabling [auto-merging](https://dependabot.com/docs/config-file/#automerged_updates)
+* :warning: Currently supports only the `javascript` [`package_manager`](https://dependabot.com/docs/config-file/#package_manager-required)
 
 ### Example
 
