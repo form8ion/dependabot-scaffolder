@@ -34,7 +34,10 @@ $ npm install @form8ion/dependabot-scaffolder --save-prod
 ```javascript
 import {scaffold} from '@form8ion/dependabot-scaffolder';
 
-scaffold({vcs: {host: 'GitHub', owner: 'form8ion', name: 'the-repo'}});
+scaffold({
+  projectRoot: process.cwd(),
+  vcs: {host: 'GitHub', owner: 'form8ion', name: 'the-repo'}
+});
 ```
 
 ## Contributing
