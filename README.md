@@ -15,6 +15,9 @@ project
   * [Example](#example)
     * [Import](#import)
     * [Execute](#execute)
+  * [API](#api)
+    * [`projectRoot` __string__ (_required_)](#projectroot-string-required)
+    * [`vcs` __object__ (_required_)](#vcs-object-required)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -56,6 +59,19 @@ scaffold({
   vcs: {owner: 'form8ion', name: 'the-repo'}
 });
 ```
+
+### API
+
+#### `projectRoot` __string__ (_required_)
+
+path to the root of the project
+
+#### `vcs` __object__ (_required_)
+
+* `owner` __string__ (_required_)
+  account name on the host service for the repository
+* `name` __string__ (_required_)
+  repository name
 
 ## Contributing
 
