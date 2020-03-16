@@ -1,3 +1,3 @@
-// remark-usage-ignore-next
-/* eslint-disable-next-line no-unused-vars */
-import dependabotScaffolder from './lib/index.cjs';
+import {scaffold} from './lib/index.cjs';
+
+scaffold({vcs: {host: 'GitHub', owner: 'form8ion', name: 'the-repo'}});
