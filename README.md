@@ -53,7 +53,7 @@ $ npm install @form8ion/dependabot-scaffolder --save-prod
 #### Import
 
 ```javascript
-import {scaffold} from '@form8ion/dependabot-scaffolder';
+import {lift, predicate, scaffold} from '@form8ion/dependabot-scaffolder';
 ```
 
 #### Execute
@@ -63,6 +63,10 @@ scaffold({
   projectRoot: process.cwd(),
   vcs: {owner: 'form8ion', name: 'the-repo'}
 });
+
+predicate({projectRoot: process.cwd()});
+
+lift();
 ```
 
 ### API
