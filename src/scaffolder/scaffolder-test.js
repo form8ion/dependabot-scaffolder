@@ -2,7 +2,7 @@ import {assert} from 'chai';
 import any from '@travi/any';
 import sinon from 'sinon';
 import * as config from './config';
-import {scaffold} from '.';
+import {scaffold} from '../index';
 
 suite('scaffolder', () => {
   let sandbox;

@@ -1,6 +1,6 @@
 import {promises as fs} from 'fs';
 import {resolve} from 'path';
-import makeDir from '../thirdparty-wrappers/make-dir';
+import makeDir from '../../thirdparty-wrappers/make-dir';
 
 export default async function ({projectRoot}) {
   const dependabotConfigDirectory = await makeDir(`${projectRoot}/.dependabot`);

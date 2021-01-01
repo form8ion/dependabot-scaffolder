@@ -3,7 +3,7 @@ import {resolve} from 'path';
 import sinon from 'sinon';
 import any from '@travi/any';
 import {assert} from 'chai';
-import * as mkdir from '../thirdparty-wrappers/make-dir';
+import * as mkdir from '../../thirdparty-wrappers/make-dir';
 import scaffoldConfig from './config';
 
 suite('config', () => {
