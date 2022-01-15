@@ -59,14 +59,16 @@ import {lift, predicate, scaffold} from '@form8ion/dependabot-scaffolder';
 #### Execute
 
 ```javascript
-scaffold({
-  projectRoot: process.cwd(),
-  vcs: {owner: 'form8ion', name: 'the-repo'}
-});
+(async () => {
+  await scaffold({
+    projectRoot: process.cwd(),
+    vcs: {owner: 'form8ion', name: 'the-repo'}
+  });
 
-predicate({projectRoot: process.cwd()});
-
-lift();
+  if (await predicate({projectRoot: process.cwd()})) {
+    await lift();
+  }
+})();
 ```
 
 ### API
