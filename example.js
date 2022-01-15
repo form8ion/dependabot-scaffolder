@@ -1,20 +1,21 @@
 // #### Import
-// remark-usage-ignore-next
+// remark-usage-ignore-next 2
 import stubbedFs from 'mock-fs';
+import {resolve} from 'path';
 import {lift, predicate, scaffold} from './lib/index.cjs';
 
 // remark-usage-ignore-next
-stubbedFs();
+stubbedFs({templates: stubbedFs.load(resolve(...[__dirname, 'templates']))});
 
 // #### Execute
-scaffold({
-  projectRoot: process.cwd(),
-  vcs: {owner: 'form8ion', name: 'the-repo'}
-});
 
-predicate({projectRoot: process.cwd()});
+(async () => {
+  await scaffold({
+    projectRoot: process.cwd(),
+    vcs: {owner: 'form8ion', name: 'the-repo'}
+  });
 
-lift();
-
-// remark-usage-ignore-next
-stubbedFs.restore();
+  if (await predicate({projectRoot: process.cwd()})) {
+    await lift();
+  }
+})();
