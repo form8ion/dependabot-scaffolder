@@ -75,7 +75,6 @@
   },
   "dependencies": {
     "@form8ion/core": "^2.0.0",
-    "@travi/cli-messages": "^1.0.2",
-    "make-dir": "^3.0.2"
+    "@travi/cli-messages": "^1.0.2"
   }
 }

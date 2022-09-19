@@ -4,8 +4,11 @@ import stubbedFs from 'mock-fs';
 import {resolve} from 'path';
 import {lift, predicate, scaffold} from './lib/index.cjs';
 
-// remark-usage-ignore-next
-stubbedFs({templates: stubbedFs.load(resolve(...[__dirname, 'templates']))});
+// remark-usage-ignore-next 4
+stubbedFs({
+  '.github': {},
+  templates: stubbedFs.load(resolve(...[__dirname, 'templates']))
+});
 
 // #### Execute
 
