@@ -7,8 +7,8 @@
   "repository": "form8ion/dependabot-scaffolder",
   "bugs": "https://github.com/form8ion/dependabot-scaffolder/issues",
   "homepage": "https://npm.im/@form8ion/dependabot-scaffolder",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.es.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
   "sideEffects": false,
   "scripts": {
     "pretest": "run-s build",
@@ -36,7 +36,7 @@
     "test:integration:wip": "run-s 'test:integration:base -- --profile wip'",
     "test:integration:wip:debug": "DEBUG=test run-s 'test:integration:wip'",
     "test:integration:focus": "run-s 'test:integration:base -- --profile focus'",
-    "lint:publish": "publint"
+    "lint:publish": "publint --strict"
   },
   "files": [
     "lib/",

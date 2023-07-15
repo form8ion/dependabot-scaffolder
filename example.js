@@ -1,8 +1,8 @@
 // #### Import
 // remark-usage-ignore-next 2
 import stubbedFs from 'mock-fs';
-import {resolve} from 'path';
-import {lift, predicate, scaffold} from './lib/index.cjs';
+import {resolve} from 'node:path';
+import {lift, predicate, scaffold} from './lib/index';
 
 // remark-usage-ignore-next 4
 stubbedFs({
