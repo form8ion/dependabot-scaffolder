@@ -35,7 +35,8 @@
     "test:integration:debug": "DEBUG=test run-s test:integration",
     "test:integration:wip": "run-s 'test:integration:base -- --profile wip'",
     "test:integration:wip:debug": "DEBUG=test run-s 'test:integration:wip'",
-    "test:integration:focus": "run-s 'test:integration:base -- --profile focus'"
+    "test:integration:focus": "run-s 'test:integration:base -- --profile focus'",
+    "lint:publish": "publint"
   },
   "files": [
     "lib/",
@@ -44,17 +45,6 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
-  },
-  "dependencies": {
-    "@form8ion/core": "^2.0.0",
-    "@travi/cli-messages": "^1.0.2"
-  },
-  "files": [
-    "lib/",
-    "templates/"
-  ],
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {
     "@form8ion/core": "^2.0.0",
@@ -82,6 +72,7 @@
     "mocha": "10.2.0",
     "mock-fs": "5.2.0",
     "npm-run-all": "4.1.5",
+    "publint": "0.1.16",
     "remark-cli": "11.0.0",
     "remark-toc": "8.0.1",
     "remark-usage": "10.0.1",
