@@ -3,7 +3,7 @@
 import stubbedFs from 'mock-fs';
 // eslint-disable-next-line import/order
 import {resolve} from 'node:path';
-import {lift, predicate, scaffold} from './lib/index';
+import {lift, predicate, scaffold} from './lib/index.js';
 
 // remark-usage-ignore-next 4
 stubbedFs({

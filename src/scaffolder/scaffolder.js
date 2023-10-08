@@ -1,5 +1,6 @@
 import {info} from '@travi/cli-messages';
-import scaffoldConfig from './config';
+
+import scaffoldConfig from './config.js';
 
 export default async function ({projectRoot, vcs: {owner, name}}) {
   info('Configuring Dependabot');

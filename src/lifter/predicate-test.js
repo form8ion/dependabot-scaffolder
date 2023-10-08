@@ -2,7 +2,8 @@ import core from '@form8ion/core';
 import sinon from 'sinon';
 import {assert} from 'chai';
 import any from '@travi/any';
-import shouldBeLifted from './predicate';
+
+import shouldBeLifted from './predicate.js';
 
 suite('lift predicate', () => {
   let sandbox;

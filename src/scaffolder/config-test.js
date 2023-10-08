@@ -1,9 +1,11 @@
 import {promises as fs} from 'fs';
 import {resolve} from 'path';
+
 import sinon from 'sinon';
 import any from '@travi/any';
 import {assert} from 'chai';
-import scaffoldConfig from './config';
+
+import scaffoldConfig from './config.js';
 
 suite('config', () => {
   let sandbox;
