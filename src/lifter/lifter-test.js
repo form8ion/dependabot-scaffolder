@@ -1,5 +1,6 @@
 import {assert} from 'chai';
-import lift from './lifter';
+
+import lift from './lifter.js';
 
 suite('lift', () => {
   test('that dependabot branches are defined as branches to verify', () => {
