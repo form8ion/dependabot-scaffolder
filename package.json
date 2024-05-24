@@ -51,7 +51,7 @@
     "@travi/cli-messages": "^1.0.2"
   },
   "devDependencies": {
-    "@babel/register": "7.23.7",
+    "@babel/register": "7.24.6",
     "@cucumber/cucumber": "10.7.0",
     "@form8ion/babel-preset": "1.6.127",
     "@form8ion/commitlint-config": "1.0.76",
