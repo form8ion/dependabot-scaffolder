@@ -6,6 +6,7 @@ project
 <!--status-badges start -->
 
 [![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
+[![Codecov][coverage-badge]][coverage-link]
 
 <!--status-badges end -->
 
@@ -140,3 +141,7 @@ $ npm test
 [github-actions-ci-link]: https://github.com/form8ion/dependabot-scaffolder/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster
 
 [github-actions-ci-badge]: https://github.com/form8ion/dependabot-scaffolder/workflows/Node.js%20CI/badge.svg
+
+[coverage-link]: https://codecov.io/github/form8ion/dependabot-scaffolder
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/form8ion/dependabot-scaffolder?logo=codecov
