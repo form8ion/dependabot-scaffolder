@@ -25,6 +25,6 @@ After(function () {
 
 When('the scaffolder results are processed', async function () {
   if (await test({projectRoot: this.projectRoot})) {
-    this.result = await lift({projectRoot: this.projectRoot});
+    this.result = await lift({projectRoot: this.projectRoot, vcs: {owner: this.vcsOwner, name: this.vcsName}});
   }
 });

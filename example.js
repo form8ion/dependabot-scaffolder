@@ -12,13 +12,8 @@ stubbedFs({
 
 // #### Execute
 
-(async () => {
-  await scaffold({
-    projectRoot: process.cwd(),
-    vcs: {owner: 'form8ion', name: 'the-repo'}
-  });
+await scaffold({projectRoot: process.cwd()});
 
-  if (await test({projectRoot: process.cwd()})) {
-    await lift();
-  }
-})();
+if (await test({projectRoot: process.cwd()})) {
+  await lift({vcs: {owner: 'form8ion', name: 'the-repo'}});
+}

@@ -2,20 +2,10 @@ import {info} from '@travi/cli-messages';
 
 import scaffoldConfig from './config.js';
 
-export default async function ({projectRoot, vcs: {owner, name}}) {
+export default async function ({projectRoot}) {
   info('Configuring Dependabot');
 
   await scaffoldConfig({projectRoot});
 
-  return {
-    badges: {
-      contribution: {
-        dependabot: {
-          text: 'Dependabot',
-          link: 'https://dependabot.com/',
-          img: `https://badgen.net/dependabot/${owner}/${name}/?icon=dependabot`
-        }
-      }
-    }
-  };
+  return {};
 }
