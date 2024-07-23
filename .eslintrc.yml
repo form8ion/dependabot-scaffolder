@@ -1,8 +1,13 @@
+root: true
+
 extends:
   - '@form8ion'
-  - '@form8ion/mocha'
   - '@form8ion/cucumber'
+
 overrides:
-  - files: example.js
+  - files: ./vitest.config.js
     rules:
-      import/no-extraneous-dependencies: 'off'
+      import/no-unresolved: off
+
+parserOptions:
+  ecmaVersion: 2022
