@@ -1,5 +1,6 @@
-import {directoryExists} from '@form8ion/core';
+import {fileExists, directoryExists} from '@form8ion/core';
 
-export default function ({projectRoot}) {
-  return directoryExists(`${projectRoot}/.dependabot`);
+export default async function ({projectRoot}) {
+  return (await fileExists(`${projectRoot}/.github/dependabot.yml`))
+    || directoryExists(`${projectRoot}/.dependabot`);
 }
