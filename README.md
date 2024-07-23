@@ -113,7 +113,7 @@ $ npm test
 
 [npm-link]: https://www.npmjs.com/package/@form8ion/dependabot-scaffolder
 
-[npm-badge]: https://img.shields.io/npm/v/@form8ion/dependabot-scaffolder.svg
+[npm-badge]: https://img.shields.io/npm/v/@form8ion/dependabot-scaffolder?logo=npm
 
 [runkit-link]: https://npm.runkit.com/@form8ion/dependabot-scaffolder
 
@@ -121,7 +121,7 @@ $ npm test
 
 [license-link]: LICENSE
 
-[license-badge]: https://img.shields.io/github/license/form8ion/dependabot-scaffolder.svg
+[license-badge]: https://img.shields.io/github/license/form8ion/dependabot-scaffolder.svg?logo=opensourceinitiative
 
 [commit-convention-link]: https://conventionalcommits.org
 
