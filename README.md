@@ -33,6 +33,7 @@ project
 [![npm][npm-badge]][npm-link]
 [![Try @form8ion/dependabot-scaffolder on RunKit][runkit-badge]][runkit-link]
 [![MIT license][license-badge]][license-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
@@ -152,3 +153,5 @@ $ npm test
 [renovate-link]: https://renovatebot.com
 
 [renovate-badge]: https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=renovatebot
+
+[node-badge]: https://img.shields.io/node/v/@form8ion/dependabot-scaffolder?logo=node.js
