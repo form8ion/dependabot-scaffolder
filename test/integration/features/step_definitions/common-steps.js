@@ -7,15 +7,14 @@ import {After, Before, When} from '@cucumber/cucumber';
 let lift, test;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));          // eslint-disable-line no-underscore-dangle
-const stubbedNodeModules = stubbedFs.load(resolve(__dirname, '..', '..', '..', '..', 'node_modules'));
-
 Before(async function () {
   this.projectRoot = process.cwd();
   // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
   ({lift, test} = await import('@form8ion/dependabot-scaffolder'));
 
   stubbedFs({
-    node_modules: stubbedNodeModules
+    node_modules: stubbedFs.load(resolve(__dirname, '..', '..', '..', '..', 'node_modules')),
+    templates: stubbedFs.load(resolve(__dirname, '..', '..', '..', '..', 'templates'))
   });
 });
 
