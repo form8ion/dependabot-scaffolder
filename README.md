@@ -33,6 +33,7 @@ project
 [![npm][npm-badge]][npm-link]
 [![Try @form8ion/dependabot-scaffolder on RunKit][runkit-badge]][runkit-link]
 [![MIT license][license-badge]][license-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
@@ -55,22 +56,17 @@ $ npm install @form8ion/dependabot-scaffolder --save-prod
 #### Import
 
 ```javascript
-import {lift, predicate, scaffold} from '@form8ion/dependabot-scaffolder';
+import {lift, test, scaffold} from '@form8ion/dependabot-scaffolder';
 ```
 
 #### Execute
 
 ```javascript
-(async () => {
-  await scaffold({
-    projectRoot: process.cwd(),
-    vcs: {owner: 'form8ion', name: 'the-repo'}
-  });
+await scaffold({projectRoot: process.cwd()});
 
-  if (await predicate({projectRoot: process.cwd()})) {
-    await lift();
-  }
-})();
+if (await test({projectRoot: process.cwd()})) {
+  await lift({vcs: {owner: 'form8ion', name: 'the-repo'}});
+}
 ```
 
 ### API
@@ -152,3 +148,5 @@ $ npm test
 [renovate-link]: https://renovatebot.com
 
 [renovate-badge]: https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=renovatebot
+
+[node-badge]: https://img.shields.io/node/v/@form8ion/dependabot-scaffolder?logo=node.js

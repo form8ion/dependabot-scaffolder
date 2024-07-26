@@ -1,25 +1,19 @@
 // #### Import
-// remark-usage-ignore-next 3
+// remark-usage-ignore-next 2
 import stubbedFs from 'mock-fs';
 // eslint-disable-next-line import/order
-import {resolve} from 'node:path';
-import {lift, predicate, scaffold} from './lib/index.js';
+import {lift, test, scaffold} from './lib/index.js';
 
 // remark-usage-ignore-next 4
 stubbedFs({
   '.github': {},
-  templates: stubbedFs.load(resolve(...[__dirname, 'templates']))
+  templates: stubbedFs.load('templates')
 });
 
 // #### Execute
 
-(async () => {
-  await scaffold({
-    projectRoot: process.cwd(),
-    vcs: {owner: 'form8ion', name: 'the-repo'}
-  });
+await scaffold({projectRoot: process.cwd()});
 
-  if (await predicate({projectRoot: process.cwd()})) {
-    await lift();
-  }
-})();
+if (await test({projectRoot: process.cwd()})) {
+  await lift({vcs: {owner: 'form8ion', name: 'the-repo'}});
+}
